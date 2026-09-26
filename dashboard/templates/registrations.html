@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Registrations · HR Dashboard{% endblock %}
+{% block content %}
+<div class="row"><div><h1>Registrations</h1><p class="lead muted">Search and manage saved student records.</p></div>{% if can_edit %}<a class="btn" href="{% url 'registration_new' %}">+ New registration</a>{% endif %}</div>
+<section class="panel"><form method="get" class="search"><input name="q" value="{{ query }}" placeholder="Search name, field, supervisor or date" aria-label="Search registrations"><button class="btn" type="submit">Search</button></form>
+  <p class="muted">{{ total_matches }} result{{ total_matches|pluralize }}{% if total_matches > 200 %}; showing first 200{% endif %}</p>
+  {% if rows %}<table><thead><tr><th>Name</th><th>Field</th><th>Supervisor</th><th>Date</th>{% if can_edit %}<th></th>{% endif %}</tr></thead><tbody>
+  {% for row in rows %}<tr><td>{{ row.name }}</td><td>{{ row.field }}</td><td>{{ row.supervisor }}</td><td>{{ row.registration_date }}</td>
+  {% if can_edit %}<td><a class="table-link" href="{% url 'registration_edit' row.id %}">Edit</a></td>{% endif %}</tr>{% endfor %}
+  </tbody></table>{% else %}<p class="empty">No matching registrations.</p>{% endif %}
+</section>
+{% endblock %}

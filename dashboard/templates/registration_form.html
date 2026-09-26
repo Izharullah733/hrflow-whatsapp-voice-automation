@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}{{ title }} · HR Dashboard{% endblock %}
+{% block content %}
+<h1>{{ title }}</h1><p class="lead muted">Student details will also synchronize to the Google Sheet.</p>
+<section class="panel form"><form method="post">{% csrf_token %}{{ form.as_p }}<div class="row"><button class="btn" type="submit">Save registration</button><a class="btn btn-secondary" href="{% url 'registrations' %}">Cancel</a></div></form></section>
+{% endblock %}

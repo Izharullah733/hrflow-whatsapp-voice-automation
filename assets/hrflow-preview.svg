@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">HRFlow illustrative dashboard preview</title>
+  <desc id="desc">A stylized, synthetic preview of an HR registration dashboard and WhatsApp voice workflow.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#103b33"/><stop offset="1" stop-color="#0d6952"/></linearGradient>
+    <linearGradient id="glow" x2="1" y2="1"><stop stop-color="#61e4ad"/><stop offset="1" stop-color="#c4f5de"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#06261d" flood-opacity=".24"/></filter>
+  </defs>
+  <rect width="1200" height="620" rx="28" fill="url(#bg)"/>
+  <circle cx="1060" cy="70" r="250" fill="#ffffff" opacity=".04"/>
+  <circle cx="102" cy="520" r="210" fill="#ffffff" opacity=".04"/>
+  <text x="66" y="82" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif" font-size="38" font-weight="750">HR<tspan fill="#72e6b8">Flow</tspan></text>
+  <text x="66" y="126" fill="#c8e5db" font-family="Segoe UI,Arial,sans-serif" font-size="18">Voice-first HR data, with a clear view for your team.</text>
+  <rect x="64" y="176" width="738" height="390" rx="22" fill="#f6faf7" filter="url(#shadow)"/>
+  <text x="96" y="225" fill="#173b32" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="700">Overview</text>
+  <text x="96" y="251" fill="#6d847a" font-family="Segoe UI,Arial,sans-serif" font-size="13">ILLUSTRATIVE DATA — NOT A LIVE SCREENSHOT</text>
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <rect x="96" y="280" width="202" height="108" rx="14" fill="#ffffff" stroke="#dcece4"/>
+    <text x="116" y="310" font-size="13" fill="#658076">REGISTRATIONS</text><text x="116" y="356" font-size="34" font-weight="750" fill="#087a55">128</text>
+    <rect x="314" y="280" width="202" height="108" rx="14" fill="#ffffff" stroke="#dcece4"/>
+    <text x="334" y="310" font-size="13" fill="#658076">TODAY</text><text x="334" y="356" font-size="34" font-weight="750" fill="#087a55">08</text>
+    <rect x="532" y="280" width="235" height="108" rx="14" fill="#ffffff" stroke="#dcece4"/>
+    <text x="552" y="310" font-size="13" fill="#658076">ACTIVE FIELDS</text><text x="552" y="356" font-size="34" font-weight="750" fill="#087a55">03</text>
+    <rect x="96" y="415" width="671" height="121" rx="14" fill="#ffffff" stroke="#dcece4"/>
+    <text x="116" y="447" font-size="13" font-weight="700" fill="#658076">STUDENT</text>
+    <text x="342" y="447" font-size="13" font-weight="700" fill="#658076">FIELD</text>
+    <text x="620" y="447" font-size="13" font-weight="700" fill="#658076">STATUS</text>
+    <path d="M116 459H747" stroke="#e7f0eb"/>
+    <text x="116" y="492" font-size="17" fill="#173b32">Sample Student</text>
+    <text x="342" y="492" font-size="17" fill="#173b32">Web Development</text>
+    <rect x="620" y="471" width="110" height="29" rx="15" fill="#e1f7eb"/><text x="640" y="491" font-size="14" font-weight="700" fill="#087a55">Saved</text>
+  </g>
+  <rect x="839" y="210" width="295" height="320" rx="26" fill="#ffffff" filter="url(#shadow)"/>
+  <rect x="863" y="231" width="247" height="48" rx="13" fill="#e8f7ee"/>
+  <circle cx="886" cy="255" r="10" fill="#0b8a5d"/>
+  <text x="904" y="261" fill="#164535" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="700">Team message</text>
+  <rect x="862" y="309" width="217" height="66" rx="16" fill="#eff5f1"/>
+  <circle cx="891" cy="342" r="17" fill="url(#glow)"/>
+  <path d="M888 335v10a4 4 0 0 0 8 0v-10a4 4 0 0 0-8 0zm-4 8a8 8 0 0 0 16 0m-8 8v5" fill="none" stroke="#0c6046" stroke-width="2.5" stroke-linecap="round"/>
+  <g fill="#93b4a5"><rect x="920" y="337" width="5" height="13" rx="2"/><rect x="929" y="330" width="5" height="27" rx="2"/><rect x="938" y="334" width="5" height="19" rx="2"/><rect x="947" y="324" width="5" height="39" rx="2"/><rect x="956" y="333" width="5" height="21" rx="2"/><rect x="965" y="328" width="5" height="31" rx="2"/><rect x="974" y="337" width="5" height="13" rx="2"/><rect x="983" y="331" width="5" height="25" rx="2"/></g>
+  <rect x="895" y="403" width="214" height="91" rx="16" fill="#d7f7e2"/>
+  <text x="914" y="435" fill="#164535" font-family="Segoe UI,Arial,sans-serif" font-size="15">Registration saved.</text>
+  <text x="914" y="463" fill="#164535" font-family="Segoe UI,Arial,sans-serif" font-size="15">Ask for a report anytime.</text>
+</svg>

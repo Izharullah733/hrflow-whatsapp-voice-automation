@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Reports · HR Dashboard{% endblock %}
+{% block content %}
+<h1>Reports</h1><p class="lead muted">Counts are calculated from saved registrations.</p>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+  <section class="panel" style="margin:0"><h2>By field</h2><table><thead><tr><th>Field</th><th>Registrations</th></tr></thead><tbody>
+  {% for label,count in by_field %}<tr><td>{{ label }}</td><td>{{ count }}</td></tr>{% empty %}<tr><td colspan="2" class="muted">No data yet</td></tr>{% endfor %}
+  </tbody></table></section>
+  <section class="panel" style="margin:0"><h2>By supervisor</h2><table><thead><tr><th>Supervisor</th><th>Registrations</th></tr></thead><tbody>
+  {% for label,count in by_supervisor %}<tr><td>{{ label }}</td><td>{{ count }}</td></tr>{% empty %}<tr><td colspan="2" class="muted">No data yet</td></tr>{% endfor %}
+  </tbody></table></section>
+</div>
+<p class="note">Total registrations: <strong>{{ total }}</strong>. Salary and commission data are not shown in this dashboard MVP.</p>
+{% endblock %}

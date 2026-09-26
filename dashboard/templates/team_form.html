@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}Add member · HR Dashboard{% endblock %}
+{% block content %}
+<h1>Add team member</h1><p class="lead muted">They can log in with their phone number and password. WhatsApp access needs separate approval.</p>
+<section class="panel form"><form method="post">{% csrf_token %}{{ form.as_p }}<div class="row"><button class="btn" type="submit">Create account</button><a class="btn btn-secondary" href="{% url 'team' %}">Cancel</a></div></form></section>
+{% endblock %}

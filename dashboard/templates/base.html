@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{% block title %}HR Dashboard{% endblock %}</title>
+  <style>
+    :root{font-family:Inter,Segoe UI,Arial,sans-serif;color:#18312b;background:#f5f8f6}
+    *{box-sizing:border-box}body{margin:0}a{color:inherit}button,input,select{font:inherit}
+    .shell{max-width:1180px;margin:auto;padding:0 20px}.top{background:#123b33;color:#fff}
+    .top .shell{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:70px}
+    .brand{font-weight:800;letter-spacing:.2px;text-decoration:none;font-size:20px}.brand span{color:#71e5b8}
+    nav{display:flex;align-items:center;gap:6px;flex-wrap:wrap}nav a,nav button{color:#e6f7ef;text-decoration:none;background:none;border:0;padding:10px 12px;border-radius:10px;cursor:pointer}
+    nav a:hover,nav button:hover,.active{background:#225849}main{padding-top:34px!important;padding-bottom:60px!important}
+    h1{font-size:30px;line-height:1.2;margin:0 0 8px}h2{font-size:19px;margin:0 0 18px}.muted{color:#647a71}.lead{margin:0 0 28px}
+    .row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:white;border:1px solid #dce8e1;border-radius:18px;padding:24px;box-shadow:0 5px 20px rgba(15,60,42,.04)}
+    .stat{font-size:34px;font-weight:800;color:#126349;margin:12px 0 0}.label{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:#647a71;font-weight:700}
+    .panel{background:#fff;border:1px solid #dce8e1;border-radius:18px;padding:24px;margin-top:20px;overflow:auto}
+    .btn{display:inline-block;background:#087a55;color:white;border:1px solid #087a55;border-radius:10px;padding:11px 16px;text-decoration:none;font-weight:700;cursor:pointer}
+    .btn:hover{background:#086344}.btn-secondary{background:white;color:#126349;border-color:#b5d5c6}.btn-secondary:hover{background:#eff8f2}
+    table{width:100%;border-collapse:collapse;min-width:540px}th{text-align:left;color:#647a71;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+    td,th{padding:14px 10px;border-bottom:1px solid #e8efeb}tr:last-child td{border:0}.table-link{color:#087a55;font-weight:700;text-decoration:none}
+    .form{max-width:650px}.form p{display:flex;flex-direction:column;gap:7px;margin:0 0 18px}.form label{font-weight:700}
+    .form input,.form select,.search input{width:100%;padding:11px 13px;border:1px solid #b8cdc2;border-radius:10px;background:white;color:#18312b}
+    .form input:focus,.form select:focus,.search input:focus{outline:3px solid #c4eed9;border-color:#087a55}
+    .errorlist{color:#a12626;margin:0 0 14px;padding-left:18px}.messages{list-style:none;padding:0;margin:0 0 20px}.messages li{padding:13px 16px;border-radius:10px;background:#e7f6ed;margin-bottom:8px}.messages li.warning{background:#fff1d7}
+    .search{display:flex;gap:8px;max-width:460px;flex:1}.empty{padding:28px 0;color:#647a71;text-align:center}
+    .badge{border-radius:999px;background:#e7f6ed;color:#126349;padding:5px 10px;font-size:12px;font-weight:700}
+    .note{background:#eaf4ee;padding:15px;border-left:4px solid #087a55;border-radius:8px;color:#325c4c}
+    @media(max-width:720px){.top .shell{align-items:flex-start;flex-direction:column;padding-top:18px;padding-bottom:14px}.grid{grid-template-columns:1fr}nav{width:100%}nav a,nav button{padding:8px 10px}h1{font-size:25px}.panel{padding:18px}.shell{padding-left:14px;padding-right:14px}}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="shell">
+    <a class="brand" href="{% url 'home' %}">HR<span>Flow</span></a>
+    {% if request.user.is_authenticated %}
+    <nav aria-label="Main navigation">
+      <a href="{% url 'home' %}">Overview</a><a href="{% url 'registrations' %}">Registrations</a>
+      <a href="{% url 'reports' %}">Reports</a>{% if is_admin %}<a href="{% url 'team' %}">Team</a>{% endif %}
+      <form method="post" action="{% url 'logout' %}" style="margin:0">{% csrf_token %}<button type="submit">Log out</button></form>
+    </nav>
+    {% endif %}
+  </div></header>
+  <main class="shell">
+    {% if messages %}<ul class="messages">{% for message in messages %}<li class="{{ message.tags }}">{{ message }}</li>{% endfor %}</ul>{% endif %}
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

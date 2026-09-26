@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Team · HR Dashboard{% endblock %}
+{% block content %}
+<div class="row"><div><h1>Team</h1><p class="lead muted">Only administrators can add team accounts.</p></div><a class="btn" href="{% url 'team_new' %}">+ Add member</a></div>
+<p class="note">Dashboard login and WhatsApp access are separate. For now, approve WhatsApp numbers in <code>.env</code>; adding an account here does not enable WhatsApp automatically.</p>
+<p class="muted">Admin can <a class="table-link" href="/admin/password_change/">change their password</a> and deactivate accounts in <a class="table-link" href="/admin/auth/user/">account settings</a>.</p>
+<section class="panel"><table><thead><tr><th>Name</th><th>Login phone</th><th>Role</th><th>Status</th></tr></thead><tbody>
+{% for member in users %}<tr><td>{{ member.first_name|default:member.username }}</td><td>{{ member.username }}</td><td>{% if member.is_superuser %}Admin{% else %}{% for group in member.groups.all %}{{ group.name }}{% empty %}No role{% endfor %}{% endif %}</td><td>{% if member.is_active %}<span class="badge">Active</span>{% else %}Disabled{% endif %}</td></tr>{% endfor %}
+</tbody></table></section>
+{% endblock %}

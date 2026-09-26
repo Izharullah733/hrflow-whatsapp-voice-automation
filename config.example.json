@@ -1,0 +1,16 @@
+{
+  "supervisors": {
+    "Web Development": "Team Lead A",
+    "Graphic Design": "Team Lead B",
+    "Data Science": "Team Lead C"
+  },
+  "field_aliases": {
+    "web development": "Web Development",
+    "web dev": "Web Development",
+    "ویب ڈویلپمنٹ": "Web Development",
+    "graphic design": "Graphic Design",
+    "گرافک ڈیزائن": "Graphic Design",
+    "data science": "Data Science",
+    "ڈیٹا سائنس": "Data Science"
+  }
+}

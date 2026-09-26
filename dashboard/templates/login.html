@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}Log in · HR Dashboard{% endblock %}
+{% block content %}
+<div class="panel" style="max-width:460px;margin:7vh auto 0">
+  <h1>Welcome back</h1><p class="lead muted">Sign in with your approved account to access HR data.</p>
+  <form method="post" class="form">{% csrf_token %}{{ form.as_p }}<button class="btn" type="submit">Log in</button></form>
+</div>
+{% endblock %}

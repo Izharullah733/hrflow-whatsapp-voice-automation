@@ -1,0 +1,22 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  dashboard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install test dependencies
+        run: python -m pip install 'Django>=5.2,<6' tzdata
+      - name: System checks
+        run: python dashboard/manage.py check
+      - name: Dashboard tests
+        run: python dashboard/manage.py test dashboard_app
+      - name: Bot language tests
+        run: python -m unittest discover tests

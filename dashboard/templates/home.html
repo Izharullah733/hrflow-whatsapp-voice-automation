@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Overview · HR Dashboard{% endblock %}
+{% block content %}
+<div class="row"><div><h1>Overview</h1><p class="lead muted">Your HR data at a glance.</p></div>{% if can_edit %}<a class="btn" href="{% url 'registration_new' %}">+ New registration</a>{% endif %}</div>
+<div class="grid">
+  <div class="card"><div class="label">Total registrations</div><div class="stat">{{ total }}</div></div>
+  <div class="card"><div class="label">Registered today</div><div class="stat">{{ today_count }}</div></div>
+  <div class="card"><div class="label">Active fields</div><div class="stat">{{ field_count }}</div></div>
+</div>
+<section class="panel"><div class="row"><h2>Recent registrations</h2><a class="table-link" href="{% url 'registrations' %}">View all →</a></div>
+  {% if recent %}<table><thead><tr><th>Name</th><th>Field</th><th>Supervisor</th><th>Date</th></tr></thead><tbody>
+  {% for row in recent %}<tr><td>{{ row.name }}</td><td>{{ row.field }}</td><td>{{ row.supervisor }}</td><td>{{ row.registration_date }}</td></tr>{% endfor %}
+  </tbody></table>{% else %}<p class="empty">No registrations yet. New WhatsApp and dashboard entries will appear here.</p>{% endif %}
+</section>
+{% endblock %}
