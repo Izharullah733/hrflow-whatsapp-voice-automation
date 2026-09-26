@@ -2,8 +2,6 @@
 
 <p align="center"><img src="assets/hrflow-preview.svg" alt="Illustrative HRFlow dashboard and voice workflow" width="100%"></p>
 
-
-
 HRFlow is a local-first prototype for turning Urdu, Roman Urdu, and English WhatsApp voice notes into structured registration records. It also answers HR questions from saved data and provides a private, mobile-friendly dashboard for authorized team members.
 
 > **Status:** Functional local prototype, not an internet-hosted production service. The WhatsApp adapter uses Selenium and a dedicated Chrome profile; it must stay on a logged-in computer. The dashboard runs locally until secure hosting is configured.

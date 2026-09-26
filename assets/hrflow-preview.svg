@@ -13,7 +13,6 @@
   <text x="66" y="126" fill="#c8e5db" font-family="Segoe UI,Arial,sans-serif" font-size="18">Voice-first HR data, with a clear view for your team.</text>
   <rect x="64" y="176" width="738" height="390" rx="22" fill="#f6faf7" filter="url(#shadow)"/>
   <text x="96" y="225" fill="#173b32" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="700">Overview</text>
-  <text x="96" y="251" fill="#6d847a" font-family="Segoe UI,Arial,sans-serif" font-size="13">ILLUSTRATIVE DATA — NOT A LIVE SCREENSHOT</text>
   <g font-family="Segoe UI,Arial,sans-serif">
     <rect x="96" y="280" width="202" height="108" rx="14" fill="#ffffff" stroke="#dcece4"/>
     <text x="116" y="310" font-size="13" fill="#658076">REGISTRATIONS</text><text x="116" y="356" font-size="34" font-weight="750" fill="#087a55">128</text>
