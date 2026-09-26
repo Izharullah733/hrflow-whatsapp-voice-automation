@@ -2,7 +2,7 @@
 
 <p align="center"><img src="assets/hrflow-preview.svg" alt="Illustrative HRFlow dashboard and voice workflow" width="100%"></p>
 
-<p align="center"><em>Illustrative preview with synthetic data. No real HR records, phone numbers, chats, or credentials are included.</em></p>
+
 
 HRFlow is a local-first prototype for turning Urdu, Roman Urdu, and English WhatsApp voice notes into structured registration records. It also answers HR questions from saved data and provides a private, mobile-friendly dashboard for authorized team members.
 
