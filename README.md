@@ -104,4 +104,4 @@ python -m unittest discover tests
 | `config.example.json` / `.env.example` | Safe configuration templates |
 | `assets/hrflow-preview.svg` | Synthetic documentation illustration |
 
-No real dashboard screenshot is published because live screenshots can reveal names and HR records.
+
